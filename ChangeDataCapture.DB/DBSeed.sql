@@ -9,9 +9,9 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-TRUNCATE TABLE [Source].[07_CDC];
+TRUNCATE TABLE [Source].[07_CDC_src];
 
-INSERT INTO [Source].[07_CDC]
+INSERT INTO [Source].[07_CDC_src]
            ([name],[state])
      VALUES
             ('1','1')

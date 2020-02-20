@@ -18,7 +18,7 @@ BEGIN
 
 		EXEC sys.sp_cdc_enable_table
 			@source_schema = 'Source', --Schema of Source Table
-			@source_name = '07_CDC', --Schema of Source Table
+			@source_name = '07_CDC_src', --Schema of Source Table
 			@role_name = NULL, --Controls Access to Change Data
 			@supports_net_changes = 0 --Supports Quering for net changes
 	COMMIT TRAN

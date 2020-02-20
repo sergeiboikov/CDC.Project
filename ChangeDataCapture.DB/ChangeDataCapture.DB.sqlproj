@@ -59,8 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="cdc_states.sql" />
-    <Build Include="07_CDC.sql" />
+    <Build Include="07_CDC_src.sql" />
     <Build Include="Source.sql" />
+    <Build Include="Destination.sql" />
+    <Build Include="07_CDC_dest.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="TurnOnCDC.sql" />
