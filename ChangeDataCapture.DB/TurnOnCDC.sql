@@ -11,17 +11,12 @@ Post-Deployment Script Template
 */
 :setvar DBName "ChangeDataCapture"
 
-IF NOT EXISTS (SELECT 1 FROM sys.databases WHERE [name] =  N'$(DBName)' AND [is_cdc_enabled] = 1)
-BEGIN
-	BEGIN TRAN
-		EXEC sys.sp_cdc_enable_db;
+EXEC sys.sp_cdc_enable_db;
 
-		EXEC sys.sp_cdc_enable_table
-			@source_schema = 'Source', --Schema of Source Table
-			@source_name = 'Country_src', --Schema of Source Table
-			@role_name = NULL, --Controls Access to Change Data
-			@supports_net_changes = 0 --Supports Quering for net changes
-	COMMIT TRAN
-END
+EXEC sys.sp_cdc_enable_table
+	@source_schema = 'Source', --Schema of Source Table
+	@source_name = 'Person', --Schema of Source Table
+	@role_name = NULL, --Controls Access to Change Data
+	@supports_net_changes = 1 --Supports Quering for net changes
 
 

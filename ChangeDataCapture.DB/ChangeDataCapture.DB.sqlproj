@@ -59,14 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="cdc_states.sql" />
-    <Build Include="Country_src.sql" />
+    <Build Include="Person_src.sql" />
     <Build Include="Source.sql" />
     <Build Include="Destination.sql" />
-    <Build Include="Country_dest.sql" />
+    <Build Include="Person_dest.sql" />
     <Build Include="Staging.sql" />
-    <Build Include="Country_inserts.sql" />
-    <Build Include="Country_updates.sql" />
-    <Build Include="Country_deletes.sql" />
+    <Build Include="Person_inserts.sql" />
+    <Build Include="Person_updates.sql" />
+    <Build Include="Person_deletes.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="TurnOnCDC.sql" />

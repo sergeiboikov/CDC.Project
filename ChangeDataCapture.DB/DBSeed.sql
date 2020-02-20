@@ -9,14 +9,15 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-TRUNCATE TABLE [Source].[Country_src];
-GO
-INSERT INTO [Source].[Country_src]
-           ([name],[state])
+INSERT INTO [Source].[Person]
+           ([FirstName]
+           ,[LastName]
+           ,[MiddleName]
+           ,[Birthdate]
+           ,[Gender]
+           ,[Address])
      VALUES
-            ('Russia','1')
-		   ,('USA','2')
-		   ,('Japan','3')
-		   ,('China','4')
-		   ,('Germany','5')
+           (N'John',	N'Tolkien',	N'Ronald',	'1892-01-03',	N'M',	N'United Kingdom')
+		   , (N'Dan',	N'Brown',	NULL,	'1964-06-22',	N'M',	N'USA')
+		   , (N'Paulo',	N'Coelho',	NULL,	'1947-08-24',	N'M',	N'Brazil');
 GO
