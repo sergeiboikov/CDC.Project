@@ -64,7 +64,6 @@
     <Build Include="Destination.sql" />
     <Build Include="Person_dest.sql" />
     <Build Include="Staging.sql" />
-    <Build Include="Person_inserts.sql" />
     <Build Include="Person_updates.sql" />
     <Build Include="Person_deletes.sql" />
   </ItemGroup>
