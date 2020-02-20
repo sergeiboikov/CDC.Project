@@ -9,14 +9,14 @@ Post-Deployment Script Template
                SELECT * FROM [$(TableName)]					
 --------------------------------------------------------------------------------------
 */
-TRUNCATE TABLE [Source].[07_CDC_src];
-
-INSERT INTO [Source].[07_CDC_src]
+TRUNCATE TABLE [Source].[Country_src];
+GO
+INSERT INTO [Source].[Country_src]
            ([name],[state])
      VALUES
-            ('1','1')
-		   ,('2','2')
-		   ,('3','3')
-		   ,('4','4')
-		   ,('5','5')
+            ('Russia','1')
+		   ,('USA','2')
+		   ,('Japan','3')
+		   ,('China','4')
+		   ,('Germany','5')
 GO
